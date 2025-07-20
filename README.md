@@ -199,7 +199,9 @@ Want to make Rootle even more amazing? We'd love your help!
 
 ## 📱 **Screenshots**
 
-*Coming soon: Screenshots so beautiful they'll make you cry tears of joy*
+<img width="1197" height="654" alt="Image" src="https://github.com/user-attachments/assets/18468a17-cf61-4c92-90b3-481e86c72ac2" />
+
+*More coming soon*
 
 ---
 

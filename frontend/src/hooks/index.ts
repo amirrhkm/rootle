@@ -1,0 +1,1 @@
+export { useCredentialParser } from './useCredentialParser'; 

@@ -188,7 +188,9 @@ export function AWSProfileProvider({ children }: AWSProfileProviderProps) {
         }),
       });
 
-      if (!response.ok) {
+      // Parse response regardless of status code (200 or 401)
+      // Both success and validation failure return JSON with validation result
+      if (!response.ok && response.status !== 401) {
         throw new Error('Failed to validate credentials');
       }
 
@@ -197,7 +199,7 @@ export function AWSProfileProvider({ children }: AWSProfileProviderProps) {
       // Update profile with validation result
       const updatedProfiles = profiles.map(p => 
         p.id === id 
-          ? { ...p, isValid: validation.isValid, lastValidated: validation.checkedAt }
+          ? { ...p, isValid: validation.isValid, lastValidated: new Date(validation.checkedAt) }
           : p
       );
 
@@ -206,7 +208,10 @@ export function AWSProfileProvider({ children }: AWSProfileProviderProps) {
 
       // Update active profile if it was validated
       if (activeProfile && activeProfile.id === id) {
-        setActiveProfileState({ ...activeProfile, isValid: validation.isValid, lastValidated: validation.checkedAt });
+        const updatedActiveProfile = updatedProfiles.find(p => p.id === id);
+        if (updatedActiveProfile) {
+          setActiveProfileState(updatedActiveProfile);
+        }
       }
 
       return validation;

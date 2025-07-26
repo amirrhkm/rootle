@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { NavigationMenu } from "@/components/navigation-menu"
+import NavigationMenu from "@/components/navigation-menu"
 import { AWSProfileProvider } from "@/contexts/AWSProfileContext"
 
 const inter = Inter({ subsets: ["latin"] })

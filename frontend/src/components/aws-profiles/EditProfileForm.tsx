@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 import { UpdateAWSProfileRequest, AWS_REGIONS, AWSProfile } from '@/types/aws';

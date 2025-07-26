@@ -1,86 +1,120 @@
 import { Button } from "@/components/ui/button"
 import { 
-  Users,
-  Activity,
-  FileText,
-  AlertCircle
-} from "lucide-react"
+  Database,
+  Calendar,
+  Upload
+} from 'lucide-react';
+import Link from "next/link"
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-700 to-emerald-700 bg-clip-text text-transparent">Dashboard</h1>
-        <p className="text-slate-600 mt-2">Welcome to Rootle Dashboard</p>
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-teal-700 to-emerald-700 bg-clip-text text-transparent">
+          Cloud Service Dashboard
+        </h1>
+        <p className="text-slate-600 mt-2">Manage and trigger cloud services via S3 file uploads</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <DashboardCard
-          title="Total Users"
-          value="0"
-          icon={<Users className="text-teal-600" />}
-          status="No users yet"
-          gradientFrom="from-teal-600"
-          gradientTo="to-cyan-600"
-        />
-        <DashboardCard
-          title="Active Sessions"
-          value="0"
-          icon={<Activity className="text-emerald-600" />}
-          status="No active sessions"
-          gradientFrom="from-emerald-600"
-          gradientTo="to-teal-600"
-        />
-        <DashboardCard
-          title="Documents"
-          value="0"
-          icon={<FileText className="text-slate-600" />}
-          status="No documents"
-          gradientFrom="from-slate-600"
-          gradientTo="to-teal-600"
-        />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* GSAP/RSTS-EOD Service */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-teal-100/50 hover:shadow-xl transition-all duration-300">
+          <div className="flex items-center space-x-3 mb-4">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+              <Database className="text-white w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-800">GSAP/RSTS-EOD</h3>
+              <p className="text-sm text-slate-600">End of Day & POS Sales processing</p>
+            </div>
+          </div>
+          <p className="text-slate-600 text-sm mb-4">
+            Generate EODSales or POSSales trigger files for single sites, date ranges, or bulk operations.
+          </p>
+          <div className="flex space-x-2">
+            <Link href="/cloud-services/gsap-eod" className="flex-1">
+              <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700">
+                <Upload className="mr-2 w-4 h-4" />
+                Generate Files
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* GSAP Monthly Service */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-teal-100/50 hover:shadow-xl transition-all duration-300">
+          <div className="flex items-center space-x-3 mb-4">
+            <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
+              <Calendar className="text-white w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-800">GSAP Monthly</h3>
+              <p className="text-sm text-slate-600">Fuel Month End Dips processing</p>
+            </div>
+          </div>
+          <p className="text-slate-600 text-sm mb-4">
+            Generate monthly fuel dip reports for specific sites and time periods.
+          </p>
+          <div className="flex space-x-2">
+            <Link href="/cloud-services/gsap-monthly" className="flex-1">
+              <Button className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700">
+                <Upload className="mr-2 w-4 h-4" />
+                Generate Files
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
 
+      {/* Quick Access */}
+      <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-teal-100/50">
+        <h3 className="text-xl font-semibold text-slate-800 mb-4">Quick Access</h3>
+        <div className="grid grid-cols-2 gap-4">
+          <Link href="/cloud-services">
+            <div className="p-4 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg text-white hover:from-purple-600 hover:to-purple-700 transition-all">
+              <h4 className="font-medium">All Services</h4>
+              <p className="text-sm text-purple-100">Configure triggers</p>
+            </div>
+          </Link>
+          <Link href="/aws-profiles">
+            <div className="p-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-lg text-white hover:from-teal-600 hover:to-teal-700 transition-all">
+              <h4 className="font-medium">AWS Profiles</h4>
+              <p className="text-sm text-teal-100">Manage credentials</p>
+            </div>
+          </Link>
+          <Link href="/cloud-services/outputs">
+            <div className="p-4 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-lg text-white hover:from-indigo-600 hover:to-indigo-700 transition-all">
+              <h4 className="font-medium">Monitor Outputs</h4>
+              <p className="text-sm text-indigo-100">View generated files</p>
+            </div>
+          </Link>
+          <Link href="/cloud-services/history">
+            <div className="p-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-lg text-white hover:from-amber-600 hover:to-amber-700 transition-all">
+              <h4 className="font-medium">Upload History</h4>
+              <p className="text-sm text-amber-100">Track uploads</p>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Service Status Overview */}
       <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-teal-100/50">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl font-semibold text-slate-800">Recent Activity</h2>
-          <Button variant="outline" size="sm" className="bg-white/60 backdrop-blur-sm border-teal-200">View All</Button>
-        </div>
-        <div className="text-center py-12">
-          <AlertCircle className="mx-auto h-12 w-12 text-teal-400" />
-          <h3 className="mt-3 text-sm font-semibold text-slate-800">No recent activity</h3>
-          <p className="mt-1 text-sm text-slate-600">Activity will appear here once you start using the system.</p>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-interface DashboardCardProps {
-  title: string
-  value: string
-  icon: React.ReactNode
-  status: string
-  gradientFrom: string
-  gradientTo: string
-}
-
-function DashboardCard({ title, value, icon, status, gradientFrom, gradientTo }: DashboardCardProps) {
-  return (
-    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-teal-100/50 hover:shadow-xl transition-all duration-300 hover:scale-105">
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradientFrom} ${gradientTo} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-      <div className="relative z-10 flex items-center justify-between">
-        <div>
-          <p className="text-slate-600 text-sm font-medium">{title}</p>
-          <h3 className="text-3xl font-bold mt-2 text-slate-800">{value}</h3>
-          <p className="text-slate-500 text-xs mt-1">{status}</p>
-        </div>
-        <div className={`p-3 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-lg shadow-lg`}>
-          <div className="text-white">
-            {icon}
+        <h3 className="text-lg font-semibold text-slate-800 mb-4">Service Status</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="text-center p-4 bg-slate-50 rounded-lg">
+            <div className="text-2xl font-bold text-slate-700">0</div>
+            <div className="text-sm text-slate-600">Active Triggers</div>
+          </div>
+          <div className="text-center p-4 bg-slate-50 rounded-lg">
+            <div className="text-2xl font-bold text-slate-700">0</div>
+            <div className="text-sm text-slate-600">Pending Outputs</div>
+          </div>
+          <div className="text-center p-4 bg-slate-50 rounded-lg">
+            <div className="text-2xl font-bold text-slate-700">0</div>
+            <div className="text-sm text-slate-600">Completed Today</div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

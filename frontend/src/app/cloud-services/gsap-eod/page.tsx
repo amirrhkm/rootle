@@ -157,18 +157,12 @@ export default function GSAPEODPage() {
     <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center space-x-4">
-        <Link href="/cloud-services">
-          <Button variant="ghost" size="sm">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Services
-          </Button>
-        </Link>
         <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+          <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
             <Database className="text-white w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent">
               GSAP/RSTS-EOD Service
             </h1>
             <p className="text-slate-600">Configure and trigger End of Day & POS Sales processing</p>
@@ -196,7 +190,7 @@ export default function GSAPEODPage() {
           {/* S3 Configuration */}
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-teal-100/50">
             <div className="flex items-center space-x-2 mb-4">
-              <Settings className="w-5 h-5 text-blue-500" />
+              <Settings className="w-5 h-5 text-emerald-500" />
               <h3 className="text-lg font-semibold text-slate-800">S3 Configuration</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -208,7 +202,7 @@ export default function GSAPEODPage() {
                   type="text"
                   value={bucketName}
                   onChange={(e) => setBucketName(e.target.value)}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                   placeholder="my-s3-bucket"
                 />
               </div>
@@ -220,13 +214,13 @@ export default function GSAPEODPage() {
                   type="text"
                   value={sftpUser}
                   onChange={(e) => setSftpUser(e.target.value)}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                   placeholder="username"
                 />
               </div>
             </div>
-            <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-              <p className="text-sm text-blue-800">
+            <div className="mt-4 p-3 bg-emerald-50 rounded-lg">
+              <p className="text-sm text-emerald-800">
                 <strong>Upload Path:</strong> {getS3Path()}
               </p>
             </div>
@@ -240,13 +234,13 @@ export default function GSAPEODPage() {
                 onClick={() => setServiceType('EODSales')}
                 className={`p-4 rounded-lg border-2 transition-all ${
                   serviceType === 'EODSales'
-                    ? 'border-blue-500 bg-blue-50'
+                    ? 'border-emerald-500 bg-emerald-50'
                     : 'border-slate-200 hover:border-slate-300'
                 }`}
               >
                 <div className="text-center">
                   <FileText className={`w-8 h-8 mx-auto mb-2 ${
-                    serviceType === 'EODSales' ? 'text-blue-500' : 'text-slate-400'
+                    serviceType === 'EODSales' ? 'text-emerald-500' : 'text-slate-400'
                   }`} />
                   <div className="font-medium">EOD Sales</div>
                   <div className="text-sm text-slate-600">End of Day Sales Data</div>
@@ -256,13 +250,13 @@ export default function GSAPEODPage() {
                 onClick={() => setServiceType('POSSales')}
                 className={`p-4 rounded-lg border-2 transition-all ${
                   serviceType === 'POSSales'
-                    ? 'border-blue-500 bg-blue-50'
+                    ? 'border-emerald-500 bg-emerald-50'
                     : 'border-slate-200 hover:border-slate-300'
                 }`}
               >
                 <div className="text-center">
                   <Database className={`w-8 h-8 mx-auto mb-2 ${
-                    serviceType === 'POSSales' ? 'text-blue-500' : 'text-slate-400'
+                    serviceType === 'POSSales' ? 'text-emerald-500' : 'text-slate-400'
                   }`} />
                   <div className="font-medium">POS Sales</div>
                   <div className="text-sm text-slate-600">Point of Sale Data</div>
@@ -278,7 +272,7 @@ export default function GSAPEODPage() {
               {/* Single Date */}
               <div className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                 generationType === 'single'
-                  ? 'border-blue-500 bg-blue-50'
+                  ? 'border-emerald-500 bg-emerald-50'
                   : 'border-slate-200 hover:border-slate-300'
               }`} onClick={() => setGenerationType('single')}>
                 <div className="flex items-center space-x-3">
@@ -303,7 +297,7 @@ export default function GSAPEODPage() {
                         type="text"
                         value={siteId}
                         onChange={(e) => setSiteId(e.target.value)}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                         placeholder="0084"
                       />
                     </div>
@@ -315,7 +309,7 @@ export default function GSAPEODPage() {
                         type="date"
                         value={date}
                         onChange={(e) => setDate(e.target.value.replace(/-/g, ''))}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                       />
                     </div>
                   </div>
@@ -325,7 +319,7 @@ export default function GSAPEODPage() {
               {/* Date Range */}
               <div className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                 generationType === 'range'
-                  ? 'border-blue-500 bg-blue-50'
+                  ? 'border-emerald-500 bg-emerald-50'
                   : 'border-slate-200 hover:border-slate-300'
               }`} onClick={() => setGenerationType('range')}>
                 <div className="flex items-center space-x-3">
@@ -350,7 +344,7 @@ export default function GSAPEODPage() {
                         type="text"
                         value={siteId}
                         onChange={(e) => setSiteId(e.target.value)}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                         placeholder="0084"
                       />
                     </div>
@@ -362,7 +356,7 @@ export default function GSAPEODPage() {
                         type="date"
                         value={startDate}
                         onChange={(e) => setStartDate(e.target.value.replace(/-/g, ''))}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                       />
                     </div>
                     <div>
@@ -373,7 +367,7 @@ export default function GSAPEODPage() {
                         type="date"
                         value={endDate}
                         onChange={(e) => setEndDate(e.target.value.replace(/-/g, ''))}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                       />
                     </div>
                   </div>
@@ -383,7 +377,7 @@ export default function GSAPEODPage() {
               {/* Bulk Operation */}
               <div className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                 generationType === 'bulk'
-                  ? 'border-blue-500 bg-blue-50'
+                  ? 'border-emerald-500 bg-emerald-50'
                   : 'border-slate-200 hover:border-slate-300'
               }`} onClick={() => setGenerationType('bulk')}>
                 <div className="flex items-center space-x-3">
@@ -391,7 +385,7 @@ export default function GSAPEODPage() {
                     type="radio"
                     checked={generationType === 'bulk'}
                     onChange={() => setGenerationType('bulk')}
-                    className="text-blue-500"
+                    className="text-emerald-500"
                   />
                   <div className="flex-1">
                     <div className="font-medium">Bulk Operation</div>
@@ -408,7 +402,7 @@ export default function GSAPEODPage() {
                         type="date"
                         value={date}
                         onChange={(e) => setDate(e.target.value.replace(/-/g, ''))}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                       />
                     </div>
                     <div>
@@ -419,7 +413,7 @@ export default function GSAPEODPage() {
                         value={bulkSites}
                         onChange={(e) => setBulkSites(e.target.value)}
                         rows={6}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                         placeholder="0028&#10;0084&#10;0091"
                       />
                     </div>
@@ -460,7 +454,7 @@ export default function GSAPEODPage() {
                 <label className="block text-sm font-medium text-slate-700 mb-2">
                   Upload Destination:
                 </label>
-                <div className="p-3 bg-blue-50 rounded-lg text-sm text-blue-800 break-all">
+                <div className="p-3 bg-emerald-50 rounded-lg text-sm text-emerald-800 break-all">
                   {getS3Path()}
                 </div>
               </div>
@@ -468,7 +462,7 @@ export default function GSAPEODPage() {
 
             <div className="mt-6 space-y-3">
               <Button 
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
+                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700"
                 onClick={handleGenerateAndUpload}
                 disabled={!isFormValid() || isUploading || !activeProfile}
               >

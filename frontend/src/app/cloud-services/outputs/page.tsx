@@ -295,11 +295,11 @@ export default function OutputMonitorPage() {
           </Button>
         </Link>
         <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
             <Search className="text-white w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent">
               Monitor Output Files
             </h1>
             <p className="text-slate-600">View and manage generated output files from cloud services</p>
@@ -335,7 +335,7 @@ export default function OutputMonitorPage() {
                 <select
                   value={config.serviceType}
                   onChange={(e) => setConfig(prev => ({ ...prev, serviceType: e.target.value as 'GSAP-EOD' | 'GSAP-Monthly' }))}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                 >
                   <option value="GSAP-EOD">GSAP/RSTS-EOD</option>
                   <option value="GSAP-Monthly">GSAP Monthly</option>
@@ -350,8 +350,8 @@ export default function OutputMonitorPage() {
                   type="text"
                   value={config.bucketName}
                   onChange={(e) => setConfig(prev => ({ ...prev, bucketName: e.target.value }))}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-                  placeholder="my-s3-bucket"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                  placeholder="biztalk-bucket"
                 />
               </div>
 
@@ -363,7 +363,7 @@ export default function OutputMonitorPage() {
                   type="text"
                   value={config.sftpUser}
                   onChange={(e) => setConfig(prev => ({ ...prev, sftpUser: e.target.value }))}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                   placeholder="username"
                 />
               </div>
@@ -376,7 +376,7 @@ export default function OutputMonitorPage() {
                   type="text"
                   value={config.triggerFileName}
                   onChange={(e) => setConfig(prev => ({ ...prev, triggerFileName: e.target.value }))}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                   placeholder="Generate_EODSales_0084_20250121.txt"
                 />
                 <p className="text-xs text-slate-500 mt-1">
@@ -389,15 +389,15 @@ export default function OutputMonitorPage() {
               <Button 
                 onClick={config.triggerFileName ? monitorOutputFiles : listAllOutputFiles}
                 disabled={!config.bucketName || !config.sftpUser || isLoading || !activeProfile}
-                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700"
+                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700"
               >
                 <RefreshCw className={`mr-2 w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
                 {isLoading ? 'Loading...' : config.triggerFileName ? 'Monitor Outputs' : 'List All Files'}
               </Button>
             </div>
 
-            <div className="mt-4 p-3 bg-purple-50 rounded-lg">
-              <p className="text-sm text-purple-800">
+            <div className="mt-4 p-3 bg-emerald-50 rounded-lg">
+              <p className="text-sm text-emerald-800">
                 <strong>Export Path:</strong> s3://{config.bucketName || 'bucket-name'}/{config.sftpUser || 'sftp-user'}/Export/{config.serviceType === 'GSAP-EOD' ? 'EODSales' : 'FuelMonthEndDips'}/
               </p>
             </div>
@@ -494,7 +494,7 @@ export default function OutputMonitorPage() {
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-teal-100/50">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
-                  <Calendar className="w-5 h-5 text-purple-500" />
+                  <Calendar className="w-5 h-5 text-emerald-500" />
                   <h3 className="text-lg font-semibold text-slate-800">
                     All Output Files ({allFiles.length})
                   </h3>
@@ -549,7 +549,7 @@ export default function OutputMonitorPage() {
             {/* Modal Header */}
             <div className="flex items-center justify-between p-6 border-b border-slate-200/50 bg-white/90 backdrop-blur-sm rounded-t-xl">
               <div className="flex items-center space-x-2">
-                <Calendar className="w-5 h-5 text-purple-500" />
+                <Calendar className="w-5 h-5 text-emerald-500" />
                 <h3 className="text-lg font-semibold text-slate-800">File Content</h3>
               </div>
               <div className="flex items-center space-x-2">
@@ -596,7 +596,7 @@ export default function OutputMonitorPage() {
             <div className="flex-1 overflow-hidden relative">
               {isLoadingContent ? (
                 <div className="flex items-center justify-center py-12">
-                  <RefreshCw className="w-8 h-8 animate-spin text-purple-500" />
+                  <RefreshCw className="w-8 h-8 animate-spin text-emerald-500" />
                   <span className="ml-3 text-slate-600">Loading file content...</span>
                 </div>
               ) : fileContent !== null ? (

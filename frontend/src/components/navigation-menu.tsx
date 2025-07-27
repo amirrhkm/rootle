@@ -98,7 +98,7 @@ export default function NavigationMenu() {
             <Cloud className="w-5 h-5 flex-shrink-0" />
             {!isCollapsed && (
               <>
-                <span className="font-medium flex-1 text-left">Cloud Services</span>
+                <span className="font-medium flex-1 text-left">Tools</span>
                 {isCloudExpanded ? (
                   <ChevronDown className="w-4 h-4" />
                 ) : (
@@ -117,7 +117,6 @@ export default function NavigationMenu() {
                     ? 'bg-teal-50 text-teal-600'
                     : 'text-slate-500 hover:bg-teal-50 hover:text-teal-600'
                 }`}>
-                  <Cloud className="w-4 h-4 flex-shrink-0" />
                   <span>Overview</span>
                 </div>
               </Link>
@@ -128,7 +127,6 @@ export default function NavigationMenu() {
                     ? 'bg-teal-50 text-teal-600'
                     : 'text-slate-500 hover:bg-teal-50 hover:text-teal-600'
                 }`}>
-                  <Database className="w-4 h-4 flex-shrink-0" />
                   <span>GSAP/RSTS-EOD</span>
                 </div>
               </Link>
@@ -139,7 +137,6 @@ export default function NavigationMenu() {
                     ? 'bg-teal-50 text-teal-600'
                     : 'text-slate-500 hover:bg-teal-50 hover:text-teal-600'
                 }`}>
-                  <Settings className="w-4 h-4 flex-shrink-0" />
                   <span>GSAP Monthly</span>
                 </div>
               </Link>
@@ -150,7 +147,6 @@ export default function NavigationMenu() {
                     ? 'bg-teal-50 text-teal-600'
                     : 'text-slate-500 hover:bg-teal-50 hover:text-teal-600'
                 }`}>
-                  <Search className="w-4 h-4 flex-shrink-0" />
                   <span>Monitor Outputs</span>
                 </div>
               </Link>
@@ -161,7 +157,6 @@ export default function NavigationMenu() {
                     ? 'bg-teal-50 text-teal-600'
                     : 'text-slate-500 hover:bg-teal-50 hover:text-teal-600'
                 }`}>
-                  <History className="w-4 h-4 flex-shrink-0" />
                   <span>Upload History</span>
                 </div>
               </Link>

@@ -105,18 +105,12 @@ export default function UploadHistoryPage() {
     <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center space-x-4">
-        <Link href="/cloud-services">
-          <Button variant="ghost" size="sm">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Services
-          </Button>
-        </Link>
         <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center">
+          <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
             <History className="text-white w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-indigo-700 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent">
               Upload History
             </h1>
             <p className="text-slate-600">View and manage your cloud service upload history</p>

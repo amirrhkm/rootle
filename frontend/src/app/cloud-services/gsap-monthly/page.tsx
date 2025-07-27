@@ -127,12 +127,6 @@ export default function GSAPMonthlyPage() {
     <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center space-x-4">
-        <Link href="/cloud-services">
-          <Button variant="ghost" size="sm">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Services
-          </Button>
-        </Link>
         <div className="flex items-center space-x-3">
           <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
             <Calendar className="text-white w-6 h-6" />
@@ -328,7 +322,7 @@ export default function GSAPMonthlyPage() {
                   Generated Filename:
                 </label>
                 <div className="p-3 bg-slate-50 rounded-lg font-mono text-sm text-slate-700 break-all">
-                  {generateFileName() || 'Configure parameters above'}
+                  {generateFileName() || 'Configure the required parameters'}
                 </div>
               </div>
 
@@ -349,7 +343,7 @@ export default function GSAPMonthlyPage() {
                   <div className="p-3 bg-amber-50 rounded-lg text-sm text-amber-800">
                     s3://{bucketName || 'bucket-name'}/{sftpUser || 'sftp-user'}/Export/FuelMonthEndDips/
                     <br />
-                    <span className="font-mono">FuelMonthEndDips_10000000_YYYYMMDD.xml</span>
+                    <span className="font-mono">FuelMonthEndDips_[GlobalSiteID]_[YYYYMMDD].xml</span>
                   </div>
                 </div>
               )}
@@ -411,7 +405,7 @@ export default function GSAPMonthlyPage() {
               <div className="p-3 bg-slate-50 rounded-lg">
                 <p className="text-sm font-medium text-slate-700 mb-1">Output File:</p>
                 <p className="text-xs text-slate-600 font-mono">
-                  FuelMonthEndDips_[ID]_[Date].xml
+                  FuelMonthEndDips_[SiteID]_[Date].xml
                 </p>
               </div>
             </div>

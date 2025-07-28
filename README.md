@@ -1,105 +1,107 @@
 # 🌿 Rootle
-### *The Modern AWS Command Center That Actually Makes Sense*
 
 <div align="center">
+
+*AWS Management Platform*
 
 ![Rootle Logo](https://img.shields.io/badge/🌿-Rootle-teal?style=for-the-badge&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-15.4-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![AWS](https://img.shields.io/badge/AWS-Ready-orange?style=for-the-badge&logo=amazon-aws)
 
-*Where AWS management meets beautiful design and developer happiness* ✨
+*AWS management platform built for developers*
 
 </div>
 
 ---
 
-## 🚀 **What is Rootle?**
+## Overview
 
-Rootle isn't just another AWS dashboard—it's a **revolution** in cloud management. Built for developers who refuse to settle for ugly interfaces and confusing workflows, Rootle transforms AWS operations into an intuitive, beautiful experience.
+Rootle is a comprehensive AWS management platform designed to streamline cloud operations. Built with modern web technologies, it provides an efficient interface for managing multiple AWS accounts and services.
 
-### **Why Rootle?** 🤔
-- **🎨 Gorgeous UI**: Dark mint gradients that don't hurt your eyes at 3 AM
-- **🔐 Multi-Profile Mastery**: Switch between AWS accounts faster than you can say "IAM"
-- **⚡ Lightning Fast**: Built with modern tech that actually performs
-- **🧠 Developer-First**: Made by developers, for developers who value their sanity
-
----
-
-## ✨ **Features That'll Blow Your Mind**
-
-### 🔑 **AWS Profile Management**
-- **Multiple Profile Support**: Manage unlimited AWS accounts with style
-- **Real-time Validation**: Know instantly if your credentials work
-- **Secure Storage**: Your secrets stay secret (locally stored, never transmitted)
-- **Visual Indicators**: Always know which profile is active
-
-### 🎯 **Modern Dashboard**
-- **Glass-morphism Design**: Because flat design is so 2015
-- **Responsive Layout**: Looks stunning on everything from phones to ultrawide monitors
-- **Dark Mint Theme**: Easy on the eyes, easy on the soul
-- **Intuitive Navigation**: Find what you need without a PhD in AWS
-
-### 🛠 **Developer Experience**
-- **TypeScript Everything**: Type safety that prevents 3 AM production incidents
-- **Hot Reload**: Changes appear faster than your coffee gets cold
-- **Modern Stack**: Built with the latest and greatest tech
-- **Clean Architecture**: Code so clean you could eat off it
+### Core Features
+- **Multi-Account Management**: Seamless switching between AWS profiles
+- **Real-time Validation**: Instant credential verification
+- **Secure Local Storage**: Credentials stored locally, never transmitted
+- **Responsive Interface**: Optimized for desktop and mobile devices
+- **TypeScript Implementation**: Full type safety across the application
 
 ---
 
-## 🏗 **Repository Structure**
+## Technical Features
+
+### AWS Profile Management
+- **Multiple Profile Support**: Manage unlimited AWS accounts
+- **Credential Validation**: Real-time verification of AWS credentials
+- **Local Storage**: Secure credential management using browser storage
+- **Profile Switching**: Instant context switching between accounts
+
+### Dashboard Interface
+- **Glass-morphism Design**: Modern UI with semi-transparent elements
+- **Responsive Layout**: Adaptive design for various screen sizes
+- **Dark Theme**: Optimized for extended development sessions
+- **Intuitive Navigation**: Streamlined access to AWS services
+
+### Development Experience
+- **TypeScript**: Comprehensive type safety throughout the codebase
+- **Hot Reload**: Fast development iteration cycles
+- **Modern Architecture**: Clean separation of concerns
+- **Component-Based**: Reusable UI components
+
+---
+
+## Architecture
 
 ```
 rootle/
-├── 🎯 frontend/                 # Next.js React Application
+├── frontend/                    # Next.js React Application
 │   ├── src/
-│   │   ├── app/                 # Next.js App Router
-│   │   │   ├── aws-profiles/    # AWS Profile Management
-│   │   │   ├── settings/        # Application Settings
-│   │   │   └── layout.tsx       # Root Layout
-│   │   ├── components/          # Reusable UI Components
-│   │   │   ├── ui/              # Core UI Library
+│   │   ├── app/                # Next.js App Router
+│   │   │   ├── aws-profiles/   # AWS Profile Management
+│   │   │   ├── settings/       # Application Settings
+│   │   │   └── layout.tsx      # Root Layout
+│   │   ├── components/         # Reusable UI Components
+│   │   │   ├── ui/             # Core UI Library
 │   │   │   └── navigation-menu.tsx
-│   │   ├── contexts/            # React Context Providers
+│   │   ├── contexts/           # React Context Providers
 │   │   │   └── AWSProfileContext.tsx
-│   │   ├── types/               # TypeScript Definitions
+│   │   ├── types/              # TypeScript Definitions
 │   │   │   └── aws.ts
-│   │   └── lib/                 # Utilities & API Clients
+│   │   └── lib/                # Utilities & API Clients
 │   ├── package.json
-│   └── tailwind.config.ts       # Styling Configuration
+│   └── tailwind.config.ts      # Styling Configuration
 │
-├── ⚡ backend/                  # Express.js API Server
+├── backend/                     # Express.js API Server
 │   ├── src/
-│   │   └── server.ts            # Main Server & AWS Integration
+│   │   └── server.ts           # Main Server & AWS Integration
 │   ├── package.json
 │   └── tsconfig.json
 │
-├── 📋 .gitignore                # Git Ignore Rules
-└── 📖 README.md                 # This Beautiful Documentation
+├── .gitignore                   # Git Ignore Rules
+└── README.md                    # Documentation
 ```
 
-### **Architecture Philosophy** 🏛
-- **Frontend**: React/Next.js for blazing-fast user experience
-- **Backend**: Express.js for rock-solid API performance  
-- **State Management**: React Context for clean, predictable data flow
-- **Styling**: Tailwind CSS for rapid, consistent design
-- **Type Safety**: TypeScript everywhere because bugs are for other projects
+### Technology Stack
+- **Frontend**: React/Next.js with TypeScript
+- **Backend**: Express.js with TypeScript
+- **State Management**: React Context API
+- **Styling**: Tailwind CSS
+- **Build Tool**: Next.js built-in bundler
 
 ---
 
-## 🚀 **Quick Start Guide**
+## Installation
 
-### **Prerequisites** 📋
-- **Node.js** 18+ (because we live in the future)
-- **npm** or **yarn** (your choice, we don't judge)
-- **AWS Account** (obviously)
-- **A desire for beautiful software** ✨
+### Prerequisites
+- **Node.js** 18+ 
+- **npm** or **yarn**
+- **AWS Account**
+- **Chrome, Firefox, or Edge** (Safari not supported for developers)
 
-### **Installation** ⚙️
+### Setup
 
 ```bash
-# Clone this masterpiece
+# Clone repository
 git clone https://github.com/amirrhkm/rootle.git
 cd rootle
 
@@ -114,36 +116,35 @@ npm install
 npm run dev
 ```
 
-### **Environment Setup** 🌍
+### Environment Configuration
 
 Create a `.env` file in the backend directory:
 ```env
 PORT=3001
-# Add any other environment variables as needed
+# Additional environment variables as needed
 ```
 
-### **First Run** 🎉
-1. **Backend**: Runs on `http://localhost:3001`
-2. **Frontend**: Runs on `http://localhost:3000`
-3. **Magic**: Happens when you visit the frontend URL
+### Development Servers
+- **Backend**: `http://localhost:3001`
+- **Frontend**: `http://localhost:3000`
 
 ---
 
-## 🛠 **Development Guide**
+## Development
 
-### **Getting Started** 🏁
-1. **Fork & Clone**: Make it yours
+### Getting Started
+1. **Fork & Clone**: Create your own repository
 2. **Install Dependencies**: `npm install` in both directories
-3. **Start Development**: Run both frontend and backend
-4. **Create Magic**: Build something amazing
+3. **Start Development**: Run both frontend and backend servers
+4. **Begin Development**: Start building features
 
-### **Project Standards** 📏
-- **Code Style**: Prettier + ESLint (because consistency matters)
-- **Commits**: Descriptive messages that tell a story
-- **Components**: Small, focused, and reusable
-- **Types**: Everything typed, nothing `any`
+### Code Standards
+- **Linting**: ESLint + Prettier configuration
+- **Commits**: Conventional commit messages
+- **Components**: Modular, reusable architecture
+- **Types**: Strict TypeScript configuration
 
-### **Development Workflow** 🔄
+### Development Workflow
 ```bash
 # Start backend development server
 cd backend && npm run dev
@@ -155,96 +156,104 @@ cd frontend && npm run dev
 npm run build    # in respective directories
 ```
 
-### **Adding New Features** 🎯
-1. **Create Types**: Define TypeScript interfaces first
-2. **Build Backend**: Add API endpoints as needed
-3. **Design Frontend**: Create beautiful, functional UI
-4. **Test Everything**: Because working software > broken dreams
+### Feature Development Process
+1. **Define Types**: Create TypeScript interfaces
+2. **Implement Backend**: Add necessary API endpoints
+3. **Build Frontend**: Create corresponding UI components
+4. **Test Integration**: Verify end-to-end functionality
 
 ---
 
-## 🎨 **Design Philosophy**
+## Browser Compatibility
 
-### **Color Palette** 🎭
-- **Primary**: Dark mint gradients that soothe the developer soul
-- **Secondary**: Teal accents that pop without screaming
-- **Neutral**: Sophisticated grays that never go out of style
+### Supported Browsers
+- **Chrome**: Full support
+- **Firefox**: Full support  
+- **Edge**: Full support
 
-### **UI Principles** 🎯
+### Not Supported
+- **Safari**: Limited support for developers due to Web API differences
+
+---
+
+## Design System
+
+### Color Scheme
+- **Primary**: Dark mint gradients
+- **Secondary**: Teal accents
+- **Neutral**: Gray scale palette
+
+### UI Principles
 - **Glass-morphism**: Semi-transparent backgrounds with blur effects
-- **Gradients**: Subtle, beautiful color transitions
-- **Micro-interactions**: Smooth animations that feel natural
-- **Responsive**: Looks perfect on every device ever made
+- **Gradients**: Subtle color transitions
+- **Animations**: Smooth micro-interactions
+- **Responsive**: Mobile-first design approach
 
 ---
 
-## 🤝 **Contributing**
+## Contributing
 
-Want to make Rootle even more amazing? We'd love your help!
+### Development Guidelines
+1. **Fork the repository**
+2. **Create feature branch** (`feature/feature-name`)
+3. **Implement changes**
+4. **Test thoroughly**
+5. **Submit pull request**
 
-### **How to Contribute** 💪
-1. **Fork the repository** (make it yours)
-2. **Create a feature branch** (`feature/amazing-new-thing`)
-3. **Make your changes** (add that magic touch)
-4. **Test everything** (because broken features make sad developers)
-5. **Submit a pull request** (share the love)
-
-### **Contribution Guidelines** 📋
-- **Code Quality**: Write code you'd be proud to show your grandmother
-- **Documentation**: Update docs if you change functionality
-- **Design Consistency**: Follow the established design patterns
-- **Have Fun**: If you're not enjoying it, you're doing it wrong
+### Contribution Standards
+- **Code Quality**: Maintain high code standards
+- **Documentation**: Update documentation for new features
+- **Design Consistency**: Follow established patterns
+- **Testing**: Include appropriate tests
 
 ---
 
-## 📱 **Screenshots**
+## Screenshots
 
-<img width="1197" height="654" alt="Image" src="https://github.com/user-attachments/assets/18468a17-cf61-4c92-90b3-481e86c72ac2" />
-
-*More coming soon*
+<img width="1197" height="654" alt="Dashboard" src="https://github.com/user-attachments/assets/18468a17-cf61-4c92-90b3-481e86c72ac2" />
 
 ---
 
-## 🔮 **Roadmap**
+## Roadmap
 
-### **Phase 1: Foundation** ✅
+### Phase 1: Foundation ✅
 - [x] AWS Profile Management
-- [x] Beautiful Dashboard UI
-- [x] Modern Tech Stack
+- [x] Dashboard Interface
+- [x] Core Architecture
 
-### **Phase 2: Power Features** 🚧
-- [ ] IAM Users and Permissions
-- [ ] Lambdas Manual Trigger
+### Phase 2: Enhanced Features 🚧
+- [ ] IAM User Management
+- [ ] Lambda Function Triggers
 - [ ] S3 Bucket Operations
-- [ ] CloudWatch Monitoring
+- [ ] CloudWatch Integration
 
-### **Phase 3: Enterprise** 🎯
-- [ ] Team Collaboration
+### Phase 3: Enterprise Features 🎯
+- [ ] Team Collaboration Tools
 - [ ] Advanced Security Features
-- [ ] Custom Dashboards
+- [ ] Custom Dashboard Builder
 - [ ] API Integration Framework
 
 ---
 
-## 🙏 **Acknowledgments**
+## Acknowledgments
 
-- **AWS**: For creating the cloud we all love to manage
-- **Next.js Team**: For making React development actually enjoyable
-- **Tailwind CSS**: For making CSS fun again
-- **The Developer Community**: For inspiring us to build better tools
+- **AWS**: Cloud infrastructure platform
+- **Next.js**: React framework
+- **Tailwind CSS**: Utility-first CSS framework
+- **Developer Community**: Open source contributions
 
 ---
 
 <div align="center">
 
-### **Built with ❤️ and probably too much coffee** ☕
+### Built with modern web technologies
 
-*Made by developers, for developers who refuse to settle for mediocrity*
+*AWS management platform for developers*
 
-**[⭐ Star this repo](https://github.com/your-username/rootle)** if Rootle made your AWS life better!
+**[⭐ Star this repository](https://github.com/your-username/rootle)** if Rootle helps with your AWS workflow
 
 </div>
 
 ---
 
-*"In a world full of boring AWS dashboards, be a Rootle." - Anonymous Developer* 
+*"Efficient AWS management for modern development teams"* 

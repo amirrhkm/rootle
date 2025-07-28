@@ -9,7 +9,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![AWS](https://img.shields.io/badge/AWS-Ready-orange?style=for-the-badge&logo=amazon-aws)
 
-*AWS management platform built for developers*
+*Personalised AWS management platform built for developers*
 
 </div>
 
@@ -93,7 +93,7 @@ rootle/
 ## Installation
 
 ### Prerequisites
-- **Node.js** 18+ 
+- **Node.js** 20+ 
 - **npm** or **yarn**
 - **AWS Account**
 - **Chrome, Firefox, or Edge** (Safari not supported for developers)
@@ -156,12 +156,6 @@ cd frontend && npm run dev
 npm run build    # in respective directories
 ```
 
-### Feature Development Process
-1. **Define Types**: Create TypeScript interfaces
-2. **Implement Backend**: Add necessary API endpoints
-3. **Build Frontend**: Create corresponding UI components
-4. **Test Integration**: Verify end-to-end functionality
-
 ---
 
 ## Browser Compatibility
@@ -210,7 +204,10 @@ npm run build    # in respective directories
 
 ## Screenshots
 
-<img width="1197" height="654" alt="Dashboard" src="https://github.com/user-attachments/assets/18468a17-cf61-4c92-90b3-481e86c72ac2" />
+<img width="1197" height="654" alt="Dashboard" src="https://github.com/user-attachments/assets/5a6778e4-df61-40d0-a470-da7ac3e1a0e9" />
+<img width="1197" height="654" alt="Upload" src="https://github.com/user-attachments/assets/59a0bec4-63c1-4843-90c8-79c2e124b59f" />
+<img width="1197" height="654" alt="History" src="https://github.com/user-attachments/assets/95f24317-d479-4f0b-8a1d-6dc76f030f58" />
+<img width="1197" height="654" alt="View" src="https://github.com/user-attachments/assets/1f8585ad-c93e-43b9-97f5-220563025f86" />
 
 ---
 
@@ -224,14 +221,8 @@ npm run build    # in respective directories
 ### Phase 2: Enhanced Features 🚧
 - [ ] IAM User Management
 - [ ] Lambda Function Triggers
-- [ ] S3 Bucket Operations
+- [x] S3 Bucket Operations
 - [ ] CloudWatch Integration
-
-### Phase 3: Enterprise Features 🎯
-- [ ] Team Collaboration Tools
-- [ ] Advanced Security Features
-- [ ] Custom Dashboard Builder
-- [ ] API Integration Framework
 
 ---
 
